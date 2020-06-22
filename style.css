@@ -1,0 +1,245 @@
+:root {
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --very-dark-blue: hsl(229, 57%, 11%);
+}
+
+/* * {
+    box-sizing: border-box;
+} */
+
+/* RESET CSS */
+body,
+p,
+a,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+/*  */
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    color: var(--pale-blue);
+    background: var(--very-dark-blue) url(images/bg-mobile.svg) no-repeat;
+    background-size: 100vh;
+    height: 100vh;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.card {
+    background-color: var(--dark-blue);
+    border-radius: 10px;
+    padding: 45px;
+    margin: 20px;
+    grid-column: span 12;
+    grid-row: span 12;
+}
+
+.navigation {
+    border-top-right-radius: 100px;
+
+}
+
+.nav-icon {
+    margin-top: 40px;
+}
+
+.nav-icon a {
+    display: inline-block;
+    background-color: var(--very-dark-blue);
+    padding: 15px;
+    border-radius: 10px;
+    width: 1.5em;
+    height: 1.5em;
+    position: relative;
+    margin-right: 20px;
+}
+
+.nav-icon img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nav-icon img {
+    /* margin-right: 20px; */
+    /* height: 2rem; */
+    /* width: 2rem; */
+    /* background-color: var(--very-dark-blue);
+    padding: 10px;
+    border-radius: 10px; */
+}
+
+.card-limit {
+    text-align: center;
+    position: relative;
+
+}
+
+.progress-bar {}
+
+.progress-bar .progress {
+    background: linear-gradient(hsl(6, 100%, 80%) to hsl(335, 100%, 65%))
+}
+
+.progress-bar .progress {
+    height: 10px;
+    /* Can be anything */
+    position: relative;
+    background-color: var(--very-dark-blue);
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    padding: 2px;
+    box-shadow: 1px 1px 1px var(--very-dark-blue);
+}
+
+.progress-bar .progress>span {
+    display: block;
+    height: 100%;
+    border-radius: 25px;
+    /* background-color: #fff; */
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar .progress>span::after {
+    content: '';
+    position: absolute;
+    right: 1px;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-color: #fff;
+    height: 75%;
+    width: 7px;
+    border-radius: 100%;
+}
+
+.range {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 0.8em;
+    font-weight: 700;
+}
+
+.data-info {
+    margin-bottom: 15px;
+}
+
+.card-limit .wrapper {
+    background-color: #fff;
+    color: var(--grayish-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    position: absolute;
+    left: 50%;
+    bottom: -50px;
+    transform: translate(-50%, 0);
+    border-radius: 10px;
+    width: 10em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.card-limit .wrapper .number-limit {
+    color: var(--very-dark-blue);
+    font-size: 3em;
+    margin-right: 10px;
+}
+
+/* small tablet styles */
+@media screen and (min-width: 620px) {
+    body {
+        background-image: url(images/bg-desktop.svg);
+        background-size: contain;
+        background-position: 100% 99%;
+    }
+}
+
+/* large tablets & laptop styles */
+@media screen and (min-width: 840px) {
+
+
+    main {
+        max-width: 960px;
+    }
+
+    .navigation {
+        border-top-right-radius: 100px;
+        grid-column: 1/6;
+        grid-row: 1/13;
+    }
+
+    .card {
+        align-self: center;
+    }
+
+    .card-limit {
+        margin-bottom: 0;
+        grid-column: 6/13;
+        grid-row: 3/13;
+        text-align: left;
+    }
+
+    .card-limit .wrapper {
+        left: calc(100% - 16em);
+        bottom: 80%;
+        transform: translate(0, 0);
+        width: 10em;
+        height: 3.5em;
+    }
+
+    .card-limit .wrapper::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 63%;
+        border-top: 25px solid transparent;
+        border-right: 30px solid #fff;
+        border-bottom: 25px solid transparent;
+    }
+}
+
+/* desktop styles */
+@media screen and (min-width: 1200px) {
+    body {
+        background-position: 100% 117%;
+    }
+
+    main {
+        max-width: 1100px;
+    }
+
+    .navigation {
+        grid-column: 1/5;
+    }
+
+    .card-limit {
+        grid-column: 5/13;
+    }
+}
