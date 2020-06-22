@@ -5,10 +5,6 @@
     --very-dark-blue: hsl(229, 57%, 11%);
 }
 
-/* * {
-    box-sizing: border-box;
-} */
-
 /* RESET CSS */
 body,
 p,
@@ -82,22 +78,11 @@ main {
     transform: translate(-50%, -50%);
 }
 
-.nav-icon img {
-    /* margin-right: 20px; */
-    /* height: 2rem; */
-    /* width: 2rem; */
-    /* background-color: var(--very-dark-blue);
-    padding: 10px;
-    border-radius: 10px; */
-}
-
 .card-limit {
     text-align: center;
     position: relative;
 
 }
-
-.progress-bar {}
 
 .progress-bar .progress {
     background: linear-gradient(hsl(6, 100%, 80%) to hsl(335, 100%, 65%))
@@ -105,7 +90,6 @@ main {
 
 .progress-bar .progress {
     height: 10px;
-    /* Can be anything */
     position: relative;
     background-color: var(--very-dark-blue);
     -moz-border-radius: 25px;
@@ -119,7 +103,6 @@ main {
     display: block;
     height: 100%;
     border-radius: 25px;
-    /* background-color: #fff; */
     background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
     position: relative;
     overflow: hidden;
